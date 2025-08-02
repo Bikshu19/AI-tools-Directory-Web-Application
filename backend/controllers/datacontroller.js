@@ -19,7 +19,7 @@ exports.getDataByCollection = async (req, res) => {
 
 exports.getInfo = async (req, res) => {
     try {
-        const response = await axios.get('https://newsdata.io/api/1/latest?apikey=pub_9ca1d092f23c4178a5fc7c8229502a6d&q=Latest%20AI%20tools%20for%20developers');
+        const response = await axios.get(process.env.newsdata);
 
         res.json(response.data.results);
     } catch (error) {
