@@ -1,0 +1,26 @@
+# Node.js
+node_modules/
+.env
+
+# Logs
+logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+
+# Frontend build
+frontend/build/
+frontend/dist/
+
+# Backend specific
+backend/node_modules/
+backend/.env
+
+# Ignore system or temp files
+*.swp
+*.swo
