@@ -1,7 +1,10 @@
 const { MongoClient } = require('mongodb');
+const dotenv = require('dotenv');
+dotenv.config();
 
-const mongoUrl = 'mongodb+srv://bikshutulimelli:bikshu@cluster0.dxun2jj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
-const dbName = 'aitools';
+const mongoUrl = process.env.mongodb;
+const dbName = process.env.data;
+
 const client = new MongoClient(mongoUrl);
 
 let db;
