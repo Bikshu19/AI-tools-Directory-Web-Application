@@ -19,7 +19,7 @@ exports.getDataByCollection = async (req, res) => {
 
 exports.getInfo = async (req, res) => {
     try {
-        const response = await axios.get(process.env.newsdata);
+        const response = await axios.get(process.env.NEWSDATA_API_KEY);
 
         res.json(response.data.results);
     } catch (error) {
@@ -39,7 +39,7 @@ exports.getapis=async(req,res)=>{
     }
 };
 const openai = new OpenAI({
-  apiKey: process.env.openai
+  apiKey: process.env.OPENAI_API_KEY
 });
 exports.getbot=async(req, res) => {
   const userMessage = req.body.message;
