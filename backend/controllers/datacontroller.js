@@ -2,6 +2,8 @@ const { getDB } = require('../db');
 const axios = require('axios');
 const mongoose = require('mongoose');
 const { OpenAI } = require('openai');
+const dotenv =require('dotenv')
+dotenv.config()
 
 exports.getDataByCollection = async (req, res) => {
     try {
@@ -37,7 +39,7 @@ exports.getapis=async(req,res)=>{
     }
 };
 const openai = new OpenAI({
-  apiKey: "***REMOVED***proj-DPEjLKqJHSotd0pfynbmvNROp9cZvH40bjB8OxkYeFcb2qWJ_-Ih4VF0H42fra1gTUViEWTDPsT3BlbkFJ8390FHTCGNcFs8Fd5ddHZT6dF2zd-WO07JXZbviXnfAY2fqn-z0qwnsq5jZivwP-54NNJrSYYA", // set this in your .env file
+  apiKey: process.env.openai
 });
 exports.getbot=async(req, res) => {
   const userMessage = req.body.message;
