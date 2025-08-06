@@ -8,7 +8,8 @@ function Ainews() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:5000/get-info')
+    fetch('http://ai-tools-directory-web-application.vercel.app
+/get-info')
       .then((res) => res.json())
       .then((data) => {
         setArticles(data);
