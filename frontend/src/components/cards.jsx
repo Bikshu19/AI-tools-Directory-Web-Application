@@ -32,7 +32,8 @@ function Cards() {
 
     const handleCardClick = async (categoryName) => {
         try {
-            const res = await axios.get(`http://localhost:5000/get-data/${categoryName}`);
+            const res = await axios.get(`http://ai-tools-directory-web-application.vercel.app
+/get-data/${categoryName}`);
             setData(res.data);
             setCategory(categoryName);
             navigate('/cat');
