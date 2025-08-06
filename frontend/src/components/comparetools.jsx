@@ -18,14 +18,16 @@ function CompareTools() {
   const [toolData, setToolData] = useState([]);
 
   const fetchTools = (category, setTools) => {
-    axios.get(`http://localhost:5000/tools/${category}`)
+    axios.get(`http://ai-tools-directory-web-application.vercel.app
+/tools/${category}`)
       .then(res => setTools(res.data))
       .catch(err => console.error(err));
   };
 
   const handleCompare = () => {
     if (selectedTool1 && selectedTool2 && selectedCategory1 && selectedCategory2) {
-      axios.get('http://localhost:5000/compare', {
+      axios.get('http://ai-tools-directory-web-application.vercel.app
+/compare', {
         params: {
           tool1: selectedTool1,
           tool2: selectedTool2,
