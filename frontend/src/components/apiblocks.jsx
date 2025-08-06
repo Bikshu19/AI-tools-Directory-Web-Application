@@ -7,7 +7,8 @@ function ApisFeatures() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/apis')
+    axios.get('http://ai-tools-directory-web-application.vercel.app
+/apis')
       .then((res) => {
         setApis(res.data);
         setLoading(false);
