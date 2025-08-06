@@ -15,7 +15,8 @@ export default function Chatbot() {
     setMessages((prev) => [...prev, userMessage, thinkingMessage]);
 
     try {
-      const response = await axios.post('http://localhost:5000/chatbot', {
+      const response = await axios.post('http://ai-tools-directory-web-application.vercel.app
+/chatbot', {
         message: input,
       });
       const botMessage = { sender: 'bot', text: response.data.reply };
